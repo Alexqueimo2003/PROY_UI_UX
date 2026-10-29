@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paso 1 Móvil — Mockup Mobile (390px)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #0f172a;
+    color: #0f172a;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .phone-frame {
+    width: 390px;
+    min-height: 844px;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    border: 8px solid #334155;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .status-bar {
+    background: #ffffff;
+    padding: 12px 24px 6px 24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .notch {
+    width: 120px;
+    height: 18px;
+    background: #334155;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin: 0 auto;
+  }
+  .btn-mobile-primary {
+    background: #0d9488;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(13,148,136,0.25);
+  }
+  .card-mobile {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="notch"></div>
+    <div class="status-bar">
+      <span>09:41</span>
+      <span>📶 5G &bull; 100%</span>
+    </div>
+    
+    <div style="padding:12px 16px; border-bottom:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
+      <a href="01_Home_Mobile.html" style="color:#0d9488; text-decoration:none; font-weight:700; font-size:13px;">&larr; Volver</a>
+      <strong style="font-size:14px;">Paso 1 de 3</strong>
+      <span style="font-size:11px; color:#64748b;">Mascota & Servicio</span>
+    </div>
+
+    <div style="padding:16px; flex:1; overflow-y:auto;">
+      <h2 style="font-size:17px; font-weight:800; margin-bottom:8px;">1. ¿Qué mascota atenderemos?</h2>
+      <div style="display:flex; gap:8px; margin-bottom:20px;">
+        <span style="background:#0d9488; color:#fff; padding:8px 14px; border-radius:999px; font-size:13px; font-weight:700;">🐕 Perro ✓</span>
+        <span style="background:#f1f5f9; color:#475569; padding:8px 14px; border-radius:999px; font-size:13px; font-weight:600;">🐈 Gato</span>
+        <span style="background:#f1f5f9; color:#475569; padding:8px 14px; border-radius:999px; font-size:13px; font-weight:600;">🐰 Exótico</span>
+      </div>
+
+      <h2 style="font-size:17px; font-weight:800; margin-bottom:8px;">2. Selecciona la atención:</h2>
+      <div class="card-mobile" style="border:2px solid #0d9488; background:#f0fdfa;">
+        <div style="display:flex; justify-content:space-between;">
+          <strong style="font-size:15px; color:#0f172a;">Consulta General</strong>
+          <strong style="font-size:18px; color:#0d9488;">$18.000</strong>
+        </div>
+        <p style="font-size:12px; color:#475569; margin:4px 0;">Examen clínico completo de rutina (30 min).</p>
+        <span style="color:#0d9488; font-weight:700; font-size:12px;">✓ Seleccionado</span>
+      </div>
+
+      <div class="card-mobile">
+        <div style="display:flex; justify-content:space-between;">
+          <strong style="font-size:15px; color:#0f172a;">Vacunación Anual</strong>
+          <strong style="font-size:18px; color:#0f172a;">$15.000</strong>
+        </div>
+        <p style="font-size:12px; color:#64748b; margin:4px 0;">Dosis séxtuple u óctuple canina.</p>
+      </div>
+
+      <div style="background:#ffffff; border-top:1px solid #e2e8f0; padding-top:14px; margin-top:20px;">
+        <div style="display:flex; justify-content:space-between; font-size:16px; font-weight:800; margin-bottom:12px;">
+          <span>Total en clínica:</span>
+          <span style="color:#0d9488;">$18.000</span>
+        </div>
+        <a href="03_Agendar_Paso2_Mobile.html" class="btn-mobile-primary">Continuar a Fecha y Hora &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

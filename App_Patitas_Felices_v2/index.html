@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patitas Felices — Clínica Veterinaria &amp; Atención Cat Friendly</title>
+  <meta name="description" content="Agenda tu cita veterinaria online en menos de 2 minutos con precios 100% transparentes, espacios Cat Friendly libres de estrés y atención de urgencias 24/7 en Providencia.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =====================================================================
+       1. CINTILLO SUPERIOR DE URGENCIAS 24/7
+       ===================================================================== -->
+  <div class="top-emergency-bar">
+    <div class="emergency-info">
+      <span class="emergency-pulse" aria-hidden="true"></span>
+      <span>🚨 <strong>¿Urgencia médica ahora mismo?</strong> Atendemos 24/7 sin cita previa.</span>
+    </div>
+    <div class="emergency-actions">
+      <a href="tel:+56912345678" class="btn-emergency-call">
+        📞 +56 9 1234 5678
+      </a>
+      <button type="button" class="btn-emergency-call trigger-emergency-modal" style="background:rgba(255,255,255,0.2); color:#fff;">
+        Protocolo 24/7
+      </button>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       2. HEADER Y NAVEGACIÓN PRINCIPAL
+       ===================================================================== -->
+  <header class="main-header">
+    <div class="nav-container">
+      <a href="#inicio" class="brand-link" aria-label="Ir al inicio de Patitas Felices">
+        <div class="brand-icon">🐾</div>
+        <div>
+          <span class="brand-name">Patitas Felices</span>
+          <span class="brand-sub">Clínica Veterinaria &amp; Cat Friendly</span>
+        </div>
+      </a>
+
+      <!-- Menú Desktop -->
+      <nav aria-label="Navegación principal">
+        <ul class="nav-links" id="navLinks" role="list">
+          <!-- Botón de cierre (solo visible en mobile) -->
+          <button type="button" class="nav-close-btn" id="navCloseBtn" aria-label="Cerrar menú" style="display:none;">✕</button>
+          <li><a href="#inicio" class="active">Inicio</a></li>
+          <li><a href="#agendar">Agendar Cita</a></li>
+          <li><a href="#servicios">Servicios &amp; Tarifas</a></li>
+          <li><a href="#cat-friendly">Atención Felina</a></li>
+          <li><a href="#equipo">Nuestro Equipo</a></li>
+          <li><a href="#" class="trigger-mis-citas" style="color:var(--primary); font-weight:700;">📋 Mis Citas</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Toggle Modo Oscuro/Claro -->
+        <button type="button" class="theme-toggle-btn" id="themeToggle" aria-label="Cambiar tema" aria-pressed="false">
+          <span class="theme-icon" id="themeIcon">🌙</span>
+          <span class="theme-toggle-label" id="themeLabel">Modo Oscuro</span>
+        </button>
+
+        <a href="#agendar" class="btn btn-primary" style="padding:10px 18px; font-size:13px; min-height:42px;">
+          <span class="nav-cta-text">Agendar Online</span> →
+        </a>
+
+        <button type="button" class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===================================================================
+         3. HERO SECTION
+         =================================================================== -->
+    <section class="hero-section container" id="inicio">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="badge badge-teal">🐾 Cuidado Veterinario Consciente y sin Estrés</span>
+          <h1>El amor y la salud que tu mejor amigo merece, con la tranquilidad que tú necesitas.</h1>
+          <p class="hero-lead">
+            Agenda su consulta médica en menos de 2 minutos. Conoce el precio exacto de antemano, sin sorpresas en caja y recibe recordatorios automáticos por WhatsApp.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#agendar" class="btn btn-primary">
+              Agendar Cita en 2 Minutos →
+            </a>
+            <a href="#servicios" class="btn btn-secondary">
+              Ver Servicios y Precios
+            </a>
+            <button type="button" class="btn btn-emergency trigger-emergency-modal">
+              🚨 Urgencias 24/7
+            </button>
+          </div>
+
+          <div class="social-proof">
+            <span class="stars" aria-label="Calificación 4.9 de 5 estrellas">★★★★★</span>
+            <span><strong>4.9 / 5</strong> en Google Reviews &bull; Más de 1.400 tutores felices en Providencia</span>
+          </div>
+        </div>
+
+        <div class="hero-card-visual">
+          <div class="hero-visual-icon">🩺🐶🐱</div>
+          <h3>Espacios Cat &amp; Dog Friendly</h3>
+          <p>Salas de espera y boxes exclusivos para gatos con aromaterapia Feliway y bajo ruido para evitar estrés.</p>
+
+          <div class="hero-perks">
+            <div class="perk-item">
+              <span aria-hidden="true">✓</span>
+              <span>Precios 100% públicos antes de atenderte</span>
+            </div>
+            <div class="perk-item">
+              <span aria-hidden="true">✓</span>
+              <span>Especialistas certificados en felinos y caninos</span>
+            </div>
+            <div class="perk-item">
+              <span aria-hidden="true">✓</span>
+              <span>Recordatorios al WhatsApp con código QR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         4. WIZARD INTERACTIVO DE AGENDAMIENTO
+         =================================================================== -->
+    <section class="container" style="padding: 16px 0 56px;" id="agendar">
+      <div class="section-header">
+        <span class="badge badge-teal">Agendamiento 100% Digital</span>
+        <h2>Reserva tu Hora en 3 Simples Pasos</h2>
+        <p>Selecciona el servicio, elige el horario disponible y asegura la atención de tu mascota.</p>
+      </div>
+
+      <div class="booking-section">
+        <!-- Indicador de Pasos -->
+        <div class="wizard-stepper" role="tablist" aria-label="Pasos del agendamiento">
+          <div class="step-indicator active" id="stepIndicator1" role="tab" aria-selected="true">
+            <div class="step-num">1</div>
+            <div>
+              <div style="font-size:10px; text-transform:uppercase;">Paso 1</div>
+              <span>Especie &amp; Servicio</span>
+            </div>
+          </div>
+          <div class="step-indicator" id="stepIndicator2" role="tab" aria-selected="false">
+            <div class="step-num">2</div>
+            <div>
+              <div style="font-size:10px; text-transform:uppercase;">Paso 2</div>
+              <span>Fecha &amp; Horario</span>
+            </div>
+          </div>
+          <div class="step-indicator" id="stepIndicator3" role="tab" aria-selected="false">
+            <div class="step-num">3</div>
+            <div>
+              <div style="font-size:10px; text-transform:uppercase;">Paso 3</div>
+              <span>Datos &amp; Confirmación</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="wizard-body">
+          <!-- PASO 1 -->
+          <div class="step-pane active" id="stepPane1" role="tabpanel" aria-labelledby="stepIndicator1">
+            <h3 class="step-title">1. ¿Para qué mascota es la consulta?</h3>
+            <p class="step-subtitle">Personalizaremos el box clínico y al especialista según su especie.</p>
+
+            <div class="species-selector">
+              <div class="radio-card species-card selected" data-species="Perro" role="radio" aria-checked="true" tabindex="0">
+                <div class="radio-icon">🐶</div>
+                <div class="radio-content">
+                  <strong>Canino / Perro</strong>
+                  <span>Atención general, vacunas y traumatología</span>
+                </div>
+              </div>
+              <div class="radio-card species-card" data-species="Gato" role="radio" aria-checked="false" tabindex="0">
+                <div class="radio-icon">🐱</div>
+                <div class="radio-content">
+                  <strong>Felino / Gato</strong>
+                  <span>Box Cat Friendly con feromonas y sin ladridos</span>
+                </div>
+              </div>
+            </div>
+
+            <h4 style="font-size:16px; font-weight:800; margin:22px 0 10px; color:var(--text-main);">
+              Selecciona el Servicio Médico:
+            </h4>
+
+            <div class="services-list-options">
+              <div class="service-select-item selected" data-service="preventiva">
+                <div class="service-select-info">
+                  <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:4px;">
+                    <span class="badge badge-teal">PREVENTIVA</span>
+                    <h4>Consulta General Preventiva</h4>
+                  </div>
+                  <p>Examen clínico completo de cabeza a cola, signos vitales y peso (30 min).</p>
+                </div>
+                <div class="service-select-price">
+                  <div class="amount">$18.000</div>
+                  <small style="color:var(--text-subtle);">Tarifa fija</small>
+                </div>
+              </div>
+
+              <div class="service-select-item" data-service="vacunacion">
+                <div class="service-select-info">
+                  <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:4px;">
+                    <span class="badge badge-teal">PREVENTIVA</span>
+                    <h4>Vacunación Anual + Carnet Digital</h4>
+                  </div>
+                  <p>Dosis séxtuple/óctuple o triple felina con carnet de vacunas en WhatsApp (20 min).</p>
+                </div>
+                <div class="service-select-price">
+                  <div class="amount">$15.000</div>
+                  <small style="color:var(--text-subtle);">Incluye vacuna</small>
+                </div>
+              </div>
+
+              <div class="service-select-item" data-service="felina">
+                <div class="service-select-info">
+                  <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:4px;">
+                    <span class="badge badge-amber">CAT FRIENDLY</span>
+                    <h4>Atención Felina Especializada</h4>
+                  </div>
+                  <p>Box libre de olores de perros, difusores Feliway y toallas tibias (40 min).</p>
+                </div>
+                <div class="service-select-price">
+                  <div class="amount">$22.000</div>
+                  <small style="color:var(--text-subtle);">Cat Advocate</small>
+                </div>
+              </div>
+
+              <div class="service-select-item" data-service="especialidad">
+                <div class="service-select-info">
+                  <div style="display:flex; align-items:center; gap:7px; flex-wrap:wrap; margin-bottom:4px;">
+                    <span class="badge badge-teal">ESPECIALIDAD</span>
+                    <h4>Control Crónico / Nefrología / Cardiología</h4>
+                  </div>
+                  <p>Evaluación con especialista médico para pacientes crónicos (45 min).</p>
+                </div>
+                <div class="service-select-price">
+                  <div class="amount">$35.000</div>
+                  <small style="color:var(--text-subtle);">Especialista</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-actions" style="justify-content:flex-end;">
+              <button type="button" class="btn btn-primary" id="btnStep1Next">
+                Continuar a Fecha y Horario →
+              </button>
+            </div>
+          </div>
+
+          <!-- PASO 2 -->
+          <div class="step-pane" id="stepPane2" role="tabpanel" aria-labelledby="stepIndicator2">
+            <h3 class="step-title">2. Elige el día y la hora de tu preferencia</h3>
+            <p class="step-subtitle">Disponibilidad en tiempo real sincronizada con nuestro equipo clínico.</p>
+
+            <div class="schedule-grid">
+              <div class="date-picker-box">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;">
+                  <strong style="color:var(--text-main); font-size:14px;">Días Disponibles</strong>
+                  <small style="color:var(--primary); font-weight:700;">Próximas fechas</small>
+                </div>
+                <div class="calendar-days-grid" id="calendarDaysGrid">
+                  <!-- Generado por app.js -->
+                </div>
+              </div>
+
+              <div class="time-slots-box">
+                <div style="margin-bottom:12px;">
+                  <strong style="color:var(--text-main); font-size:14px;">Bloques de la Mañana:</strong>
+                  <div class="time-slots-list" id="morningSlots"></div>
+                </div>
+                <div style="margin-top:18px;">
+                  <strong style="color:var(--text-main); font-size:14px;">Bloques de la Tarde:</strong>
+                  <div class="time-slots-list" id="afternoonSlots"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wizard-actions">
+              <button type="button" class="btn btn-secondary" id="btnStep2Back">
+                ← Volver a Servicios
+              </button>
+              <button type="button" class="btn btn-primary" id="btnStep2Next">
+                Continuar con Mis Datos →
+              </button>
+            </div>
+          </div>
+
+          <!-- PASO 3 -->
+          <div class="step-pane" id="stepPane3" role="tabpanel" aria-labelledby="stepIndicator3">
+            <h3 class="step-title">3. Datos del Tutor y de la Mascota</h3>
+            <p class="step-subtitle">Completaremos tu ficha médica preventiva para una atención sin demoras.</p>
+
+            <div id="step3OrderSummary"></div>
+
+            <form id="step3Form" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="tutorName">Nombre completo del tutor *</label>
+                  <input type="text" id="tutorName" required autocomplete="name" placeholder="Ej: Carlos Mendoza o Valentina Rossi">
+                  <span class="field-hint">Para recibirte en recepción.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="tutorPhone">WhatsApp de contacto *</label>
+                  <input type="tel" id="tutorPhone" required autocomplete="tel" placeholder="+56 9 1234 5678">
+                  <span class="field-hint">Enviaremos el recordatorio automático aquí.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="tutorEmail">Correo electrónico</label>
+                  <input type="email" id="tutorEmail" autocomplete="email" placeholder="tucorreo@ejemplo.com">
+                  <span class="field-hint">Copia digital del comprobante médico.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="petName">Nombre de tu mascota *</label>
+                  <input type="text" id="petName" required placeholder="Ej: Roko o Preciosa">
+                  <span class="field-hint">Para preparar su historial médico.</span>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="tutorNotes">¿Presenta algún síntoma o detalle especial? (Opcional)</label>
+                  <textarea id="tutorNotes" rows="2" placeholder="Ej: Está decaído desde ayer / Es nervioso con otros perros / Le toca vacuna anual..."></textarea>
+                </div>
+              </div>
+
+              <div class="wizard-actions">
+                <button type="button" class="btn btn-secondary" id="btnStep3Back">
+                  ← Modificar Horario
+                </button>
+                <button type="submit" class="btn btn-primary" id="btnStep3Submit">
+                  Confirmar y Reservar Cita ✓
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- PASO 4: ÉXITO -->
+          <div class="step-pane" id="stepPane4">
+            <div id="step4SuccessPane"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         5. CATÁLOGO DE SERVICIOS & TARIFAS
+         =================================================================== -->
+    <section class="section-padding container" id="servicios">
+      <div class="section-header">
+        <span class="badge badge-teal">Tarifas 100% Públicas</span>
+        <h2>Nuestros Servicios Clínicos</h2>
+        <p>Creemos en la transparencia total. Sabes exactamente lo que pagarás antes de ingresar a la consulta.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-header">
+            <span class="badge badge-teal">PREVENTIVA</span>
+            <h3>Consulta General</h3>
+            <p class="service-desc">Revisión clínica completa, pesaje, auscultación cardiopulmonar, revisión de ojos y oídos.</p>
+          </div>
+          <div class="service-footer">
+            <div>
+              <span class="service-price">$18.000</span>
+              <span class="service-duration">Duración: 30 minutos</span>
+            </div>
+            <a href="#agendar" class="btn btn-secondary" style="padding:8px 16px; font-size:13px; min-height:38px;">Agendar</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header">
+            <span class="badge badge-teal">VACUNACIÓN</span>
+            <h3>Vacunación &amp; Carnet Digital</h3>
+            <p class="service-desc">Dosis séxtuple, óctuple, antirrábica o triple felina + carnet médico descargable en WhatsApp.</p>
+          </div>
+          <div class="service-footer">
+            <div>
+              <span class="service-price">$15.000</span>
+              <span class="service-duration">Duración: 20 minutos</span>
+            </div>
+            <a href="#agendar" class="btn btn-secondary" style="padding:8px 16px; font-size:13px; min-height:38px;">Agendar</a>
+          </div>
+        </div>
+
+        <div class="service-card" style="border-color: var(--warmth);">
+          <div class="service-header">
+            <span class="badge badge-amber">CAT FRIENDLY</span>
+            <h3>Medicina Felina Libre de Estrés</h3>
+            <p class="service-desc">Box exclusivo aislado de perros con difusores de feromonas Feliway y manipulación suave certificada.</p>
+          </div>
+          <div class="service-footer">
+            <div>
+              <span class="service-price">$22.000</span>
+              <span class="service-duration">Duración: 40 minutos</span>
+            </div>
+            <a href="#agendar" class="btn btn-primary" style="padding:8px 16px; font-size:13px; min-height:38px;">Agendar</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-header">
+            <span class="badge badge-teal">ESPECIALIDAD</span>
+            <h3>Control de Paciente Crónico</h3>
+            <p class="service-desc">Atención especializada en nefrología, cardiología y geriatría con seguimiento continuo.</p>
+          </div>
+          <div class="service-footer">
+            <div>
+              <span class="service-price">$35.000</span>
+              <span class="service-duration">Duración: 45 minutos</span>
+            </div>
+            <a href="#agendar" class="btn btn-secondary" style="padding:8px 16px; font-size:13px; min-height:38px;">Agendar</a>
+          </div>
+        </div>
+
+        <div class="service-card" style="border-color: var(--emergency);">
+          <div class="service-header">
+            <span class="badge badge-red">URGENCIAS 24/7</span>
+            <h3>Triage Médico de Emergencia</h3>
+            <p class="service-desc">Atención de soporte vital, estabilización, oxígeno y analgesia inmediata sin cita previa.</p>
+          </div>
+          <div class="service-footer">
+            <div>
+              <span class="service-price">$30.000</span>
+              <span class="service-duration">Ingreso Inmediato</span>
+            </div>
+            <button type="button" class="btn btn-emergency trigger-emergency-modal" style="padding:8px 16px; font-size:13px; min-height:38px;">
+              Ver Protocolo
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         6. FILOSOFÍA CAT FRIENDLY
+         =================================================================== -->
+    <section class="section-padding cat-section" id="cat-friendly">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="badge badge-amber">Certificación Internacional Cat Friendly</span>
+            <h2 style="font-size:clamp(24px,3vw,32px); font-weight:800; margin:14px 0; color:var(--text-main);">
+              Un espacio pensado especialmente para gatos y animales sensibles
+            </h2>
+            <p style="color:var(--text-muted); font-size:15px; line-height:1.6; margin-bottom:18px;">
+              Sabemos que llevar a tu gato o perro temeroso al veterinario puede ser una experiencia estresante. Por eso en Patitas Felices contamos con infraestructura segregada:
+            </p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:12px;">
+              <li style="display:flex; gap:10px; font-size:14px; color:var(--text-main);">
+                <strong style="color:var(--primary);">🐱 Salas de espera independientes:</strong>
+                Los gatos jamás ven ni huelen de cerca a los caninos.
+              </li>
+              <li style="display:flex; gap:10px; font-size:14px; color:var(--text-main);">
+                <strong style="color:var(--primary);">🌿 Difusores de feromonas Feliway &amp; Adaptil:</strong>
+                Aromaterapia médica ambiental que reduce la ansiedad un 80%.
+              </li>
+              <li style="display:flex; gap:10px; font-size:14px; color:var(--text-main);">
+                <strong style="color:var(--primary);">⏱️ Tiempos de consulta extendidos:</strong>
+                Jamás apuramos a tu compañero; permitimos que explore el box antes del examen.
+              </li>
+            </ul>
+          </div>
+
+          <div class="cat-promise-card">
+            <div style="font-size:52px; margin-bottom:10px;">🐾✨</div>
+            <h3 style="font-size:21px; font-weight:800; margin-bottom:10px; color:var(--text-main);">Compromiso Cero Estrés</h3>
+            <p style="font-size:13.5px; color:var(--text-muted); margin-bottom:18px;">
+              Ideal para tutores que buscan tranquilidad absoluta para sus pacientes mayores o crónicos.
+            </p>
+            <a href="#agendar" class="btn btn-primary">Agendar Atención Felina</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         7. EQUIPO MÉDICO
+         =================================================================== -->
+    <section class="section-padding container" id="equipo">
+      <div class="section-header">
+        <span class="badge badge-teal">Vocación y Experiencia</span>
+        <h2>Conoce al Equipo a Cargo</h2>
+        <p>Profesionales de la salud animal con rostros visibles y trato empático hacia ti y tu mascota.</p>
+      </div>
+
+      <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+        <div class="service-card" style="text-align:center; align-items:center;">
+          <div style="width:76px; height:76px; background:var(--primary-light); color:var(--primary-hover); border-radius:50%; font-size:34px; display:inline-flex; align-items:center; justify-content:center; margin-bottom:14px;">
+            👩‍⚕️
+          </div>
+          <h3 style="font-size:17px; margin-bottom:4px;">Dra. Macarena Soto</h3>
+          <span style="font-size:12px; font-weight:700; color:var(--primary); display:block; margin-bottom:9px;">Especialista Felina (Cat Advocate)</span>
+          <p style="font-size:13px; color:var(--text-muted);">12 años dedicada al bienestar del gato doméstico y manejo etológico sin sujeción forzada.</p>
+        </div>
+
+        <div class="service-card" style="text-align:center; align-items:center;">
+          <div style="width:76px; height:76px; background:var(--warmth-light); color:#92400e; border-radius:50%; font-size:34px; display:inline-flex; align-items:center; justify-content:center; margin-bottom:14px;">
+            👨‍⚕️
+          </div>
+          <h3 style="font-size:17px; margin-bottom:4px;">Dr. Fernando Silva</h3>
+          <span style="font-size:12px; font-weight:700; color:var(--warmth); display:block; margin-bottom:9px;">Cirugía &amp; Urgenciólogo</span>
+          <p style="font-size:13px; color:var(--text-muted);">Líder del equipo de turnos nocturnos 24/7 y especialista en traumatología y tejidos blandos.</p>
+        </div>
+
+        <div class="service-card" style="text-align:center; align-items:center;">
+          <div style="width:76px; height:76px; background:var(--success-light); color:var(--success); border-radius:50%; font-size:34px; display:inline-flex; align-items:center; justify-content:center; margin-bottom:14px;">
+            👩‍⚕️
+          </div>
+          <h3 style="font-size:17px; margin-bottom:4px;">Dra. Paulina Vega</h3>
+          <span style="font-size:12px; font-weight:700; color:var(--success); display:block; margin-bottom:9px;">Medicina Preventiva &amp; Nutrición</span>
+          <p style="font-size:13px; color:var(--text-muted);">Experta en cachorros, calendarios de inmunización y cuidados geriátricos caninos.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       8. MODAL URGENCIAS 24/7
+       ===================================================================== -->
+  <div class="modal-overlay" id="emergencyModal" role="dialog" aria-modal="true" aria-labelledby="modalEmergencyTitle">
+    <div class="modal-dialog">
+      <div class="modal-header-emergency">
+        <button type="button" class="modal-close-btn" id="closeEmergencyModal" aria-label="Cerrar modal">&times;</button>
+        <div style="font-size:40px;">🚨</div>
+        <h3 id="modalEmergencyTitle">Servicio de Urgencias Médicas 24 Horas</h3>
+        <p style="font-size:13px; opacity:0.9; margin-top:4px;">Abierto sábados, domingos y festivos sin interrupción</p>
+      </div>
+
+      <div class="modal-body">
+        <div class="emergency-call-cta-box">
+          <span style="font-size:11px; font-weight:800; text-transform:uppercase; color:var(--emergency);">Línea Directa de Urgencias</span>
+          <a href="tel:+56912345678" class="emergency-phone-big">+56 9 1234 5678</a>
+          <small style="color:var(--text-muted);">Pulsa para llamar de inmediato al médico de turno</small>
+        </div>
+
+        <h4 style="font-size:14px; font-weight:800; color:var(--text-main); margin-bottom:8px;">
+          ¿Cuándo acudir de urgencia de inmediato?
+        </h4>
+        <ul class="emergency-triage-list">
+          <li><span>⚠️</span> Dificultad para respirar o jadeo con lengua morada/azulada</li>
+          <li><span>⚠️</span> Atropellos, caídas de altura o traumatismos severos</li>
+          <li><span>⚠️</span> Ingesta de venenos, medicamentos humanos o tóxicos</li>
+          <li><span>⚠️</span> Vómitos continuos acompañados de apatía total o colapso</li>
+        </ul>
+
+        <div style="background:var(--bg-elevated); padding:14px; border-radius:var(--radius-sm); font-size:13px; color:var(--text-muted);">
+          📍 <strong>Dirección:</strong> Av. Los Conquistadores 1420, Providencia (Estacionamiento exclusivo de urgencias en la puerta).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       9. MODAL MIS CITAS
+       ===================================================================== -->
+  <div class="modal-overlay" id="misCitasModal" role="dialog" aria-modal="true" aria-labelledby="modalMisCitasTitle">
+    <div class="modal-dialog" style="max-width:620px;">
+      <div style="padding:18px 22px; border-bottom:1px solid var(--border-color); display:flex; justify-content:space-between; align-items:center;">
+        <h3 id="modalMisCitasTitle" style="font-size:19px; font-weight:800; color:var(--text-main);">📋 Consultar mis Citas</h3>
+        <button type="button" class="modal-close-btn dark" id="closeMisCitasModal" aria-label="Cerrar">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p style="font-size:13.5px; color:var(--text-muted); margin-bottom:14px;">
+          Ingresa tu número de WhatsApp o el código de tu cita (ej: <strong>PF-XXXXX</strong>) para ver o cancelar tu reserva:
+        </p>
+
+        <div class="lookup-input-group">
+          <input type="text" id="lookupQuery" placeholder="Teléfono o código PF-..." aria-label="Buscar cita por teléfono o código">
+          <button type="button" class="btn btn-primary" id="btnBuscarCita" style="padding:10px 16px; font-size:14px; min-height:42px;">
+            Buscar
+          </button>
+        </div>
+
+        <div class="appointments-result-list" id="appointmentsListContainer"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       10. FOOTER
+       ===================================================================== -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h4>🐾 Patitas Felices</h4>
+        <p>Clínica Veterinaria dedicada a la salud animal consciente, sin estrés y con tarifas transparentes para toda la comunidad.</p>
+        <div style="margin-top:14px; font-size:12.5px; color:var(--primary-light);">
+          ✓ Conforme con normas de accesibilidad digital WCAG 2.1 AA
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#agendar">Agendar Cita</a></li>
+          <li><a href="#servicios">Servicios &amp; Aranceles</a></li>
+          <li><a href="#cat-friendly">Atención Felina</a></li>
+          <li><a href="#equipo">Equipo Médico</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contacto &amp; Ubicación</h5>
+        <ul>
+          <li>📍 Av. Los Conquistadores 1420, Providencia</li>
+          <li>📞 Urgencias 24/7: +56 9 1234 5678</li>
+          <li>💬 WhatsApp: +56 9 8765 4321</li>
+          <li>✉️ contacto@patitasfelices.cl</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Horarios</h5>
+        <ul>
+          <li><strong>Consultas Agendadas:</strong><br>Lun a Sáb: 09:00 a 20:00 hrs</li>
+          <li style="margin-top:8px;"><strong>Urgencias Médicas:</strong><br><span style="color:#ef4444; font-weight:700;">24 horas continuas (365 días)</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>© 2026 Patitas Felices SpA &bull; Proyecto de Diseño UI/UX — v2 Responsive &amp; Dark Mode</div>
+      <div>Desarrollado con arquitectura accesible WCAG 2.1 AA</div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

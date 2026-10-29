@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urgencias Móvil — Mockup Mobile (390px)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #0f172a;
+    color: #0f172a;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .phone-frame {
+    width: 390px;
+    min-height: 844px;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    border: 8px solid #334155;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .status-bar {
+    background: #ffffff;
+    padding: 12px 24px 6px 24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .notch {
+    width: 120px;
+    height: 18px;
+    background: #334155;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin: 0 auto;
+  }
+  .btn-mobile-primary {
+    background: #0d9488;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(13,148,136,0.25);
+  }
+  .card-mobile {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="notch"></div>
+    <div class="status-bar">
+      <span>09:41</span>
+      <span>📶 5G &bull; 100%</span>
+    </div>
+    
+    <div style="background:#fee2e2; padding:12px 16px; border-bottom:1px solid #fca5a5; display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-size:14px; font-weight:800; color:#dc2626;">🚨 URGENCIAS 24/7</span>
+      <a href="01_Home_Mobile.html" style="color:#dc2626; font-weight:700; text-decoration:none;">&times; Cerrar</a>
+    </div>
+
+    <div style="padding:16px; flex:1; overflow-y:auto;">
+      <h2 style="font-size:19px; font-weight:800; color:#991b1b; margin-bottom:6px;">Pre-Triaje de Urgencia</h2>
+      <p style="font-size:12px; color:#475569; margin-bottom:16px;">
+        Selecciona si tu mascota tiene riesgo vital para alertar a la guardia:
+      </p>
+
+      <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:20px;">
+        <label style="background:#fef2f2; border:1.5px solid #dc2626; padding:12px; border-radius:8px; display:flex; gap:10px; align-items:center;">
+          <input type="checkbox" checked style="width:18px; height:18px;">
+          <strong style="font-size:13px; color:#991b1b;">1. Pérdida de conciencia o convulsión</strong>
+        </label>
+        <label style="background:#fff; border:1px solid #cbd5e1; padding:12px; border-radius:8px; display:flex; gap:10px; align-items:center;">
+          <input type="checkbox" style="width:18px; height:18px;">
+          <span style="font-size:13px; color:#334155;">2. Asfixia o encías moradas</span>
+        </label>
+        <label style="background:#fff; border:1px solid #cbd5e1; padding:12px; border-radius:8px; display:flex; gap:10px; align-items:center;">
+          <input type="checkbox" style="width:18px; height:18px;">
+          <span style="font-size:13px; color:#334155;">3. Hemorragia activa o atropello</span>
+        </label>
+      </div>
+
+      <div style="background:#dc2626; color:#fff; border-radius:12px; padding:18px; text-align:center;">
+        <div style="font-size:15px; font-weight:800; margin-bottom:4px;">DISPARAR LLAMADA DIRECTA</div>
+        <div style="font-size:11px; color:#fecaca; margin-bottom:12px;">Guardia disponible las 24 horas</div>
+        <a href="#" style="background:#fff; color:#dc2626; padding:12px 24px; border-radius:999px; font-weight:800; font-size:16px; text-decoration:none; display:inline-block;">
+          📞 LLAMAR AL GUARDIA
+        </a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

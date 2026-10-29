@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paso 2: Fecha y Hora — Mockup Desktop</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #f1f5f9;
+    color: #0f172a;
+    line-height: 1.5;
+  }
+  .app-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+  }
+  .tunnel-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btn-back {
+    color: #0d9488;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .stepper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .step-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+  }
+  .step-active { background: #0d9488; color: #fff; }
+  .step-inactive { background: #f1f5f9; color: #64748b; border: 1px solid #cbd5e1; }
+  .btn-primary {
+    background: #0d9488;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 15px;
+    display: inline-block;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(13, 148, 136, 0.25);
+  }
+  .btn-primary:hover { background: #0f766e; }
+  .card-option {
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .card-option:hover { border-color: #99f6e4; }
+  .card-option.active {
+    border-color: #0d9488;
+    background: #f0fdfa;
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.1);
+  }
+  .chip {
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid #e2e8f0;
+    color: #475569;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .chip.active {
+    background: #0d9488;
+    color: #fff;
+    border-color: #0d9488;
+  }
+  .sticky-box {
+    background: #ffffff;
+    border: 2px solid #0d9488;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 6px 16px rgba(13, 148, 136, 0.08);
+  }
+</style>
+</head>
+<body>
+  <div class="app-container">
+    
+    <div class="tunnel-bar">
+      <a href="02_Agendar_Paso1_Servicio.html" class="btn-back">&larr; Volver al Paso 1</a>
+      <div class="stepper">
+        <span class="step-circle step-active">✓</span>
+        <span style="color:#0d9488;">Mascota</span>
+        <span style="color:#0d9488;">&mdash;&mdash;&mdash;</span>
+        <span class="step-circle step-active">2</span>
+        <strong style="color:#0d9488;">Fecha & Hora</strong>
+        <span style="color:#cbd5e1;">&mdash;&mdash;&mdash;</span>
+        <span class="step-circle step-inactive">3</span>
+        <span style="color:#64748b;">Tutor</span>
+      </div>
+      <span style="font-size:12px; color:#64748b; background:#f1f5f9; padding:4px 10px; border-radius:999px;">Paso 2 de 3</span>
+    </div>
+
+    <main style="padding: 40px; display: flex; gap: 36px;">
+      <div style="flex: 1.4;">
+        <h2 style="font-size: 22px; font-weight: 800; color: #0f172a; margin-bottom: 8px;">1. Elige médico veterinario:</h2>
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 28px;">
+          <div class="card-option active" style="padding: 12px; text-align: center;">
+            <div style="width: 44px; height: 44px; background: #0d9488; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; margin: 0 auto 8px auto;">★</div>
+            <strong style="font-size: 14px; display: block;">Cualquier Doctor</strong>
+            <span style="font-size: 11px; color: #0d9488;">Mayor disponibilidad hoy</span>
+          </div>
+
+          <div class="card-option" style="padding: 12px; text-align: center;">
+            <div style="width: 44px; height: 44px; background: #fee2e2; color: #b91c1c; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; margin: 0 auto 8px auto;">ES</div>
+            <strong style="font-size: 14px; display: block;">Dra. Emilú Soto</strong>
+            <span style="font-size: 11px; color: #64748b;">Medicina Felina</span>
+          </div>
+
+          <div class="card-option" style="padding: 12px; text-align: center;">
+            <div style="width: 44px; height: 44px; background: #e0e7ff; color: #3730a3; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; margin: 0 auto 8px auto;">CP</div>
+            <strong style="font-size: 14px; display: block;">Dr. Carlos Pérez</strong>
+            <span style="font-size: 11px; color: #64748b;">Cirugía y Traumatología</span>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 24px;">
+          <!-- Calendario Mensual -->
+          <div style="flex: 1; background: #fff; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+              <strong style="font-size: 15px; color: #0f172a;">&larr; Octubre 2026 &rarr;</strong>
+              <span style="font-size: 12px; color: #0d9488; font-weight: 700;">Sede Montecristo</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; text-align: center; font-size: 13px;">
+              <span style="color:#94a3b8; font-weight:700;">L</span><span style="color:#94a3b8; font-weight:700;">M</span><span style="color:#94a3b8; font-weight:700;">M</span><span style="color:#94a3b8; font-weight:700;">J</span><span style="color:#94a3b8; font-weight:700;">V</span><span style="color:#94a3b8; font-weight:700;">S</span><span style="color:#94a3b8; font-weight:700;">D</span>
+              <span style="color:#cbd5e1;">26</span><span style="color:#cbd5e1;">27</span>
+              <span style="padding:6px; background:#f8fafc; border-radius:6px;">28</span>
+              <span style="padding:6px; background:#0d9488; color:#fff; font-weight:800; border-radius:6px; box-shadow:0 2px 6px rgba(13,148,136,0.3);">29</span>
+              <span style="padding:6px; background:#f8fafc; border-radius:6px;">30</span>
+              <span style="padding:6px; background:#f8fafc; border-radius:6px;">31</span>
+              <span style="color:#cbd5e1;">1</span>
+            </div>
+          </div>
+
+          <!-- Franjas Horarias -->
+          <div style="flex: 1.2;">
+            <strong style="font-size: 15px; color: #0f172a; display: block; margin-bottom: 12px;">Horarios para Jueves 29:</strong>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+              <a href="#" class="chip" style="justify-content:center;">09:00 hrs</a>
+              <a href="#" class="chip" style="justify-content:center;">10:30 hrs</a>
+              <span class="chip" style="justify-content:center; background:#f1f5f9; color:#94a3b8; text-decoration:line-through; border-color:#e2e8f0;">11:15 hrs</span>
+              <a href="#" class="chip active" style="justify-content:center;">16:00 hrs ✓</a>
+              <a href="#" class="chip" style="justify-content:center;">17:30 hrs</a>
+              <a href="#" class="chip" style="justify-content:center;">18:15 hrs</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex: 0.8;">
+        <div class="sticky-box">
+          <h3 style="font-size: 18px; font-weight: 800; color: #0f766e; border-bottom: 2px solid #ccfbf1; padding-bottom: 10px; margin-bottom: 16px;">
+            Tu Cita Médica
+          </h3>
+          <div style="font-size: 14px; line-height: 2;">
+            <div>📅 <strong>Jueves 29 de Octubre</strong></div>
+            <div>⏰ <strong>16:00 hrs</strong> (Turno confirmado)</div>
+            <div>👨‍⚕️ <strong>Dra. Emilú Soto</strong> (Especialista)</div>
+            <div>🩺 <strong>Consulta Preventiva ($18.000)</strong></div>
+          </div>
+          <a href="04_Agendar_Paso3_DatosTutor.html" class="btn-primary" style="width: 100%; text-align: center; margin-top: 24px; box-sizing: border-box;">Continuar a Mis Datos &rarr;</a>
+        </div>
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>

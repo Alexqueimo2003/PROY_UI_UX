@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Éxito Móvil — Mockup Mobile (390px)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #0f172a;
+    color: #0f172a;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .phone-frame {
+    width: 390px;
+    min-height: 844px;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    border: 8px solid #334155;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .status-bar {
+    background: #ffffff;
+    padding: 12px 24px 6px 24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .notch {
+    width: 120px;
+    height: 18px;
+    background: #334155;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin: 0 auto;
+  }
+  .btn-mobile-primary {
+    background: #0d9488;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(13,148,136,0.25);
+  }
+  .card-mobile {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="notch"></div>
+    <div class="status-bar">
+      <span>09:41</span>
+      <span>📶 5G &bull; 100%</span>
+    </div>
+    
+    <div style="padding:16px; flex:1; overflow-y:auto; text-align:center; display:flex; flex-direction:column; justify-content:center;">
+      <div style="width:48px; height:48px; background:#16a34a; color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:24px; margin:0 auto 12px auto;">✓</div>
+      <h1 style="font-size:22px; font-weight:800; color:#0f172a; margin-bottom:6px;">¡Cita Confirmada!</h1>
+      <p style="font-size:13px; color:#475569; margin-bottom:20px;">
+        Enviamos los detalles de Rocky a tu WhatsApp <strong>+56 9 9876 5432</strong>.
+      </p>
+
+      <div style="background:#fff; border:2px dashed #0d9488; border-radius:12px; padding:16px; margin-bottom:20px; text-align:left;">
+        <div style="display:flex; justify-content:space-between; border-bottom:1px solid #e2e8f0; padding-bottom:6px; margin-bottom:8px;">
+          <span>Código: <strong style="color:#0d9488;">#PF-8921</strong></span>
+          <span style="color:#16a34a; font-weight:700; font-size:12px;">Confirmada</span>
+        </div>
+        <div style="font-size:13px; line-height:1.6;">
+          <div>Paciente: <strong>Rocky</strong> (Perro)</div>
+          <div>Fecha: <strong>Jue 29 Oct, 16:00 hrs</strong></div>
+          <div>Total: <strong>$18.000</strong> (Pagar en clínica)</div>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <a href="#" class="btn-mobile-primary" style="background:#25D366;">💬 Ver en WhatsApp</a>
+        <a href="#" class="btn-mobile-primary" style="background:#2563eb;">📅 Añadir al Calendario</a>
+        <a href="01_Home_Mobile.html" style="color:#0d9488; font-weight:700; text-decoration:none; font-size:14px; margin-top:8px;">Volver al Inicio</a>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paso 2 Móvil — Mockup Mobile (390px)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #0f172a;
+    color: #0f172a;
+    padding: 30px 10px;
+    display: flex;
+    justify-content: center;
+  }
+  .phone-frame {
+    width: 390px;
+    min-height: 844px;
+    background: #ffffff;
+    border-radius: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+    border: 8px solid #334155;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .status-bar {
+    background: #ffffff;
+    padding: 12px 24px 6px 24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+  .notch {
+    width: 120px;
+    height: 18px;
+    background: #334155;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    margin: 0 auto;
+  }
+  .btn-mobile-primary {
+    background: #0d9488;
+    color: #ffffff;
+    padding: 14px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(13,148,136,0.25);
+  }
+  .card-mobile {
+    background: #ffffff;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+</style>
+</head>
+<body>
+  <div class="phone-frame">
+    <div class="notch"></div>
+    <div class="status-bar">
+      <span>09:41</span>
+      <span>📶 5G &bull; 100%</span>
+    </div>
+    
+    <div style="padding:12px 16px; border-bottom:1px solid #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
+      <a href="02_Agendar_Paso1_Mobile.html" style="color:#0d9488; text-decoration:none; font-weight:700; font-size:13px;">&larr; Volver</a>
+      <strong style="font-size:14px;">Paso 2 de 3</strong>
+      <span style="font-size:11px; color:#64748b;">Fecha & Hora</span>
+    </div>
+
+    <div style="padding:16px; flex:1; overflow-y:auto;">
+      <h2 style="font-size:16px; font-weight:800; margin-bottom:8px;">1. Profesional:</h2>
+      <div style="display:flex; gap:8px; margin-bottom:16px;">
+        <div style="background:#f0fdfa; border:1.5px solid #0d9488; padding:8px 12px; border-radius:8px; text-align:center; flex:1;">
+          <strong style="font-size:12px; display:block;">★ Cualquiera</strong>
+          <span style="font-size:10px; color:#0d9488;">Más rápido</span>
+        </div>
+        <div style="background:#fff; border:1px solid #e2e8f0; padding:8px 12px; border-radius:8px; text-align:center; flex:1;">
+          <strong style="font-size:12px; display:block;">Dra. Soto</strong>
+          <span style="font-size:10px; color:#64748b;">Felina</span>
+        </div>
+      </div>
+
+      <h2 style="font-size:16px; font-weight:800; margin-bottom:8px;">2. Calendario Octubre 2026</h2>
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:12px; margin-bottom:16px;">
+        <div style="display:grid; grid-template-columns:repeat(7, 1fr); gap:4px; text-align:center; font-size:12px;">
+          <span style="color:#94a3b8; font-weight:700;">L</span><span style="color:#94a3b8; font-weight:700;">M</span><span style="color:#94a3b8; font-weight:700;">M</span><span style="color:#94a3b8; font-weight:700;">J</span><span style="color:#94a3b8; font-weight:700;">V</span><span style="color:#94a3b8; font-weight:700;">S</span><span style="color:#94a3b8; font-weight:700;">D</span>
+          <span style="color:#cbd5e1;">26</span><span style="color:#cbd5e1;">27</span>
+          <span style="padding:4px;">28</span>
+          <span style="padding:4px; background:#0d9488; color:#fff; font-weight:800; border-radius:4px;">29</span>
+          <span style="padding:4px;">30</span>
+          <span style="padding:4px;">31</span>
+          <span style="color:#cbd5e1;">1</span>
+        </div>
+      </div>
+
+      <h2 style="font-size:16px; font-weight:800; margin-bottom:8px;">Horarios Disponibles (Jue 29):</h2>
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:8px; margin-bottom:20px;">
+        <span style="background:#f1f5f9; padding:8px 4px; border-radius:6px; font-size:12px; font-weight:700; text-align:center;">10:30</span>
+        <span style="background:#0d9488; color:#fff; padding:8px 4px; border-radius:6px; font-size:12px; font-weight:800; text-align:center;">16:00 ✓</span>
+        <span style="background:#f1f5f9; padding:8px 4px; border-radius:6px; font-size:12px; font-weight:700; text-align:center;">17:30</span>
+      </div>
+
+      <a href="04_Agendar_Paso3_Mobile.html" class="btn-mobile-primary">Continuar a Mis Datos &rarr;</a>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Wireframes UI en Escala de Grises — Proyecto Patitas Felices</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  @page {
+    size: A4 portrait;
+    margin: 12mm 12mm 12mm 12mm;
+  }
+
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #111827;
+    background-color: #ffffff;
+    line-height: 1.4;
+    font-size: 9.5pt;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Header Editorial */
+  .doc-header {
+    border-bottom: 2.5px solid #111827;
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+  }
+
+  .badge-tag {
+    display: inline-block;
+    background-color: #111827;
+    color: #ffffff;
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+
+  h1 {
+    font-size: 18pt;
+    font-weight: 800;
+    color: #111827;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+  }
+
+  .subtitle {
+    font-size: 10pt;
+    color: #4b5563;
+    margin: 0 0 10px 0;
+  }
+
+  .meta-grid {
+    display: flex;
+    gap: 12px;
+    font-size: 8pt;
+    color: #374151;
+    background: #f4f4f6;
+    padding: 6px 10px;
+    border-radius: 4px;
+    border: 1px solid #e5e7eb;
+  }
+
+  .meta-grid strong {
+    color: #111827;
+  }
+
+  h2 {
+    font-size: 12pt;
+    font-weight: 800;
+    color: #111827;
+    border-left: 3.5px solid #111827;
+    padding-left: 8px;
+    margin: 16px 0 8px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    page-break-after: avoid;
+  }
+
+  p {
+    margin: 0 0 8px 0;
+    font-size: 8.8pt;
+    color: #374151;
+  }
+
+  /* Paleta de tokens */
+  .tokens-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 8pt;
+    margin: 8px 0 14px 0;
+  }
+
+  .tokens-table th, .tokens-table td {
+    padding: 5px 8px;
+    border: 1px solid #d1d5db;
+    text-align: left;
+  }
+
+  .tokens-table th {
+    background: #111827;
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .color-chip {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #9ca3af;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  /* Marco del Wireframe (Device Canvas) */
+  .wireframe-frame {
+    background: #ffffff;
+    border: 2px solid #111827;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 14px;
+    page-break-inside: avoid;
+  }
+
+  .frame-titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid #111827;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+    font-size: 8.5pt;
+    font-weight: 700;
+  }
+
+  .device-tag {
+    font-size: 7.5pt;
+    font-family: 'JetBrains Mono', monospace;
+    background: #f4f4f6;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid #d1d5db;
+  }
+
+  /* Cajas con X (Placeholders de imagen) */
+  .img-placeholder {
+    background: #f4f4f6;
+    border: 1.5px solid #9ca3af;
+    border-radius: 6px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-size: 7.5pt;
+    font-weight: 600;
+    overflow: hidden;
+  }
+
+  .img-placeholder svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-placeholder span {
+    position: relative;
+    z-index: 2;
+    background: rgba(244, 244, 246, 0.9);
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid #d1d5db;
+  }
+
+  /* Botones y UI Elements */
+  .btn-primary-wf {
+    background: #111827;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 8pt;
+    padding: 7px 14px;
+    border-radius: 999px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .btn-secondary-wf {
+    background: #ffffff;
+    color: #111827;
+    border: 1.5px solid #111827;
+    font-weight: 700;
+    font-size: 8pt;
+    padding: 6px 14px;
+    border-radius: 999px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .chip-wf {
+    background: #f4f4f6;
+    border: 1.5px solid #d1d5db;
+    border-radius: 999px;
+    padding: 5px 12px;
+    font-size: 8pt;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .chip-wf.active {
+    background: #111827;
+    color: #ffffff;
+    border-color: #111827;
+  }
+
+  .card-wf {
+    background: #ffffff;
+    border: 1.5px solid #d1d5db;
+    border-radius: 6px;
+    padding: 10px;
+  }
+
+  .card-wf.selected {
+    border: 2px solid #111827;
+    background: #fafafa;
+  }
+
+  /* Skeleton Bars */
+  .skel-bar {
+    height: 8px;
+    background: #d1d5db;
+    border-radius: 4px;
+    margin-bottom: 5px;
+  }
+  .skel-bar.dark { background: #4b5563; }
+  .skel-bar.w80 { width: 80%; }
+  .skel-bar.w60 { width: 60%; }
+  .skel-bar.w40 { width: 40%; }
+  .skel-bar.w100 { width: 100%; }
+
+  /* Anotaciones de diseño */
+  .annotation-box {
+    background: #f8fafc;
+    border-left: 3px solid #111827;
+    padding: 6px 10px;
+    font-size: 8pt;
+    color: #374151;
+    margin-top: 6px;
+  }
+
+  .annotation-box strong {
+    color: #111827;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  .footer-text {
+    margin-top: 15px;
+    padding-top: 6px;
+    border-top: 1px solid #e5e7eb;
+    font-size: 7.5pt;
+    color: #9ca3af;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <div class="doc-header">
+    <div class="badge-tag">Entregable UI/UX — Escala de Grises</div>
+    <h1>Wireframes UI de Baja y Media Fidelidad</h1>
+    <div class="subtitle">Estructura anatómica, bloques, contenedores e interacción del flujo de agendamiento para <strong>Patitas Felices</strong></div>
+    
+    <div class="meta-grid">
+      <div class="meta-item"><strong>Proyecto:</strong> Patitas Felices</div>
+      <div class="meta-item"><strong>Fase:</strong> 2. Arquitectura & Wireframing</div>
+      <div class="meta-item"><strong>Estándar:</strong> Grilla de 8 Puntos (8-pt Grid)</div>
+      <div class="meta-item"><strong>Accesibilidad:</strong> WCAG 2.1 AA (Hit-target 48px)</div>
+    </div>
+  </div>
+
+  <!-- 1. TOKENS Y SISTEMA DE BLOQUES -->
+  <h2>1. Sistema de Componentes y Tokens en Escala de Grises</h2>
+  <p>
+    Diseño basado estrictamente en bloques neutros para validar jerarquía visual, legibilidad y distribución espacial sin sesgos de color ornamental.
+  </p>
+
+  <table class="tokens-table">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Estilo / Token</th>
+        <th style="width: 15%;">Hex</th>
+        <th style="width: 60%;">Uso Anatómico en el Wireframe</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="color-chip" style="background:#FFFFFF;"></span><strong>Wireframe/Surface</strong></td>
+        <td><code>#FFFFFF</code></td>
+        <td>Fondo de tarjetas, modales, formularios, calendarios e inputs.</td>
+      </tr>
+      <tr>
+        <td><span class="color-chip" style="background:#F4F4F6;"></span><strong>Wireframe/Canvas</strong></td>
+        <td><code>#F4F4F6</code></td>
+        <td>Fondo general de la pantalla, contenedores secundarios y placeholders.</td>
+      </tr>
+      <tr>
+        <td><span class="color-chip" style="background:#E5E7EB;"></span><strong>Wireframe/Border-Light</strong></td>
+        <td><code>#E5E7EB</code></td>
+        <td>Líneas separadoras, bordes de cards y estados inactivos o vacíos.</td>
+      </tr>
+      <tr>
+        <td><span class="color-chip" style="background:#D1D5DB;"></span><strong>Wireframe/Placeholder</strong></td>
+        <td><code>#D1D5DB</code></td>
+        <td>Aspas diagonales de la "X", barras de texto secundario y skeleton bars.</td>
+      </tr>
+      <tr>
+        <td><span class="color-chip" style="background:#4B5563;"></span><strong>Wireframe/Text-Primary</strong></td>
+        <td><code>#4B5563</code></td>
+        <td>Subtítulos, etiquetas de campos de formulario y botones outline.</td>
+      </tr>
+      <tr>
+        <td><span class="color-chip" style="background:#111827;"></span><strong>Wireframe/Dark-Accent</strong></td>
+        <td><code>#111827</code></td>
+        <td>Botones primarios (CTA), titulares H1, estados activos y badges de urgencia.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- PANTALLA 1: HOME -->
+  <h2>Pantalla 1: Página de Inicio (Home — `/`)</h2>
+  
+  <div class="wireframe-frame">
+    <div class="frame-titlebar">
+      <span>VISTA HOME DESKTOP / MOBILE-RESPONSIVE</span>
+      <span class="device-tag">FRAME: 1200 x 780 PX — 12 COLS</span>
+    </div>
+
+    <!-- Topbar Urgencias -->
+    <div style="background:#111827; color:#fff; padding:5px 12px; font-size:7.5pt; font-weight:700; display:flex; justify-content:space-between; border-radius:4px; margin-bottom:8px;">
+      <span>[🚨 URGENCIAS VETERINARIAS 24/7] LLAMADA DIRECTA: +56 9 1234 5678</span>
+      <span>ATENCIÓN PERMANENTE EN MONTECRISTO</span>
+    </div>
+
+    <!-- Navbar -->
+    <div style="border:1.5px solid #d1d5db; padding:8px 12px; border-radius:6px; display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+      <div style="display:flex; align-items:center; gap:8px;">
+        <div style="width:28px; height:28px; background:#111827; border-radius:50%; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:9pt;">🐾</div>
+        <strong style="font-size:10pt;">Patitas Felices</strong>
+      </div>
+      <div style="display:flex; gap:16px; font-size:8pt; font-weight:600; color:#4b5563;">
+        <span>Servicios</span>
+        <span>Nuestro Equipo</span>
+        <span>Mi Mascota</span>
+        <span>Sedes & Contacto</span>
+      </div>
+      <div>
+        <span class="btn-primary-wf" style="font-size:7.5pt; padding:5px 12px;">Agendar Cita</span>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div style="display:flex; gap:14px; margin-bottom:14px; align-items:center;">
+      <div style="flex:1.2;">
+        <span style="font-size:7.5pt; font-weight:700; background:#f4f4f6; border:1px solid #d1d5db; padding:2px 6px; border-radius:4px; text-transform:uppercase;">
+          Clínica Veterinaria Integral & Cat Friendly
+        </span>
+        <h3 style="font-size:12pt; margin:6px 0 4px 0; font-weight:800; line-height:1.25;">
+          El cuidado y amor que tu mascota merece, con la tranquilidad que tú necesitas.
+        </h3>
+        <p style="font-size:8pt; color:#4b5563; margin-bottom:10px;">
+          Agenda tu consulta médica en 90 segundos con precios claros desde el primer paso. Cero esperas telefónicas.
+        </p>
+        <div style="display:flex; gap:8px; align-items:center;">
+          <span class="btn-primary-wf">Agendar Cita en 2 Minutos &rarr;</span>
+          <span class="btn-secondary-wf">Urgencias 24/7</span>
+        </div>
+        <div style="margin-top:8px; font-size:7.5pt; color:#4b5563;">
+          ★★★★★ <strong>4.9/5</strong> basado en más de 1.200 tutores felices
+        </div>
+      </div>
+
+      <!-- Imagen con X -->
+      <div style="flex:0.8;">
+        <div class="img-placeholder" style="height:120px;">
+          <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+            <line x1="0" y1="0" x2="100" y2="100" stroke="#d1d5db" stroke-width="1.5"></line>
+            <line x1="100" y1="0" x2="0" y2="100" stroke="#d1d5db" stroke-width="1.5"></line>
+          </svg>
+          <span>[ IMAGEN HERO: Veterinario con Paciente ]</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjetas de Servicios con Precios Transparentes -->
+    <div style="font-size:8.5pt; font-weight:700; margin-bottom:6px;">Servicios Médicos Destacados (Precios Transparentes)</div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px;">
+      <div class="card-wf">
+        <div style="font-size:8pt; font-weight:700; margin-bottom:2px;">Consulta Preventiva</div>
+        <div style="font-size:9pt; font-weight:800; color:#111827;">$18.000</div>
+        <div class="skel-bar w80" style="margin-top:4px;"></div>
+        <div class="skel-bar w60"></div>
+        <div style="font-size:7pt; color:#6b7280; margin-top:4px;">Duración: 30 min &bull; Examen clínico</div>
+      </div>
+      <div class="card-wf">
+        <div style="font-size:8pt; font-weight:700; margin-bottom:2px;">Vacunación Anual</div>
+        <div style="font-size:9pt; font-weight:800; color:#111827;">$15.000</div>
+        <div class="skel-bar w80" style="margin-top:4px;"></div>
+        <div class="skel-bar w60"></div>
+        <div style="font-size:7pt; color:#6b7280; margin-top:4px;">Duración: 20 min &bull; Incluye carnet</div>
+      </div>
+      <div class="card-wf">
+        <div style="font-size:8pt; font-weight:700; margin-bottom:2px;">Medicina Felina Cat-Friendly</div>
+        <div style="font-size:9pt; font-weight:800; color:#111827;">$22.000</div>
+        <div class="skel-bar w80" style="margin-top:4px;"></div>
+        <div class="skel-bar w60"></div>
+        <div style="font-size:7pt; color:#6b7280; margin-top:4px;">Sala libre de estrés para gatos</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="annotation-box">
+    <strong>Decisiones Anatómicas en Pantalla 1:</strong> El botón superior de Urgencias da certidumbre inmediata. El Hero Section comunica la propuesta en menos de 5 segundos. Las tarjetas de servicios atacan la incertidumbre de precios desde el primer impacto.
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- PANTALLA 2: PASO 1 AGENDAMIENTO -->
+  <h2>Pantalla 2: Paso 1 de Agendamiento — Especie y Servicio (`/agendar/paso-1`)</h2>
+
+  <div class="wireframe-frame">
+    <div class="frame-titlebar">
+      <span>FLUJO TUNNEL: PASO 1 DE 3</span>
+      <span class="device-tag">PATRÓN: EMBUDO DE CONVERSIÓN ENCAPSULADO</span>
+    </div>
+
+    <!-- Stepper de 3 Pasos -->
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid #e5e7eb;">
+      <span style="font-size:8pt; font-weight:700;">&larr; Volver al Inicio</span>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <span style="background:#111827; color:#fff; width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:7.5pt; font-weight:700;">1</span>
+        <strong style="font-size:8pt;">Servicio</strong>
+        <span style="color:#9ca3af;">&mdash;&mdash;</span>
+        <span style="border:1px solid #d1d5db; color:#9ca3af; width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:7.5pt;">2</span>
+        <span style="color:#9ca3af; font-size:8pt;">Fecha & Hora</span>
+        <span style="color:#9ca3af;">&mdash;&mdash;</span>
+        <span style="border:1px solid #d1d5db; color:#9ca3af; width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:7.5pt;">3</span>
+        <span style="color:#9ca3af; font-size:8pt;">Tutor</span>
+      </div>
+      <span style="font-size:7.5pt; color:#6b7280;">Tiempo estimado: 90s</span>
+    </div>
+
+    <!-- Layout Dividido: Selección (Izquierda) + Resumen Sticky (Derecha) -->
+    <div style="display:flex; gap:16px;">
+      <div style="flex:1.4;">
+        <!-- Selector de Especie -->
+        <div style="font-size:8pt; font-weight:700; margin-bottom:6px;">1. ¿Qué mascota atenderemos hoy?</div>
+        <div style="display:flex; gap:8px; margin-bottom:12px;">
+          <div class="chip-wf active">
+            <span>● Perro</span>
+          </div>
+          <div class="chip-wf">
+            <span>○ Gato</span>
+          </div>
+          <div class="chip-wf">
+            <span>○ Otro / Exótico</span>
+          </div>
+        </div>
+
+        <!-- Selector de Servicio -->
+        <div style="font-size:8pt; font-weight:700; margin-bottom:6px;">2. Selecciona el servicio médico</div>
+        <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:12px;">
+          <div class="card-wf selected" style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <div style="width:16px; height:16px; border-radius:50%; background:#111827; display:flex; align-items:center; justify-content:center; color:#fff; font-size:6pt;">✓</div>
+              <div>
+                <strong style="font-size:8.5pt;">Consulta Médica General</strong>
+                <div style="font-size:7.5pt; color:#6b7280;">Revisión preventiva completa, signos vitales y diagnóstico.</div>
+              </div>
+            </div>
+            <div style="text-align:right;">
+              <strong style="font-size:9.5pt;">$18.000</strong>
+              <div style="font-size:7pt; color:#6b7280;">30 min</div>
+            </div>
+          </div>
+
+          <div class="card-wf" style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <div style="width:16px; height:16px; border-radius:50%; border:1.5px solid #d1d5db;"></div>
+              <div>
+                <strong style="font-size:8.5pt;">Vacunación y Desparasitación</strong>
+                <div style="font-size:7.5pt; color:#6b7280;">Refuerzo anual óctuple / séxtuple + antiparasitario interno.</div>
+              </div>
+            </div>
+            <div style="text-align:right;">
+              <strong style="font-size:9.5pt;">$15.000</strong>
+              <div style="font-size:7pt; color:#6b7280;">20 min</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resumen Lateral Sticky -->
+      <div style="flex:0.9; background:#f4f4f6; border:1.5px solid #d1d5db; border-radius:6px; padding:10px;">
+        <div style="font-size:8pt; font-weight:700; border-bottom:1px solid #d1d5db; padding-bottom:4px; margin-bottom:8px;">
+          Resumen de tu Atención
+        </div>
+        <div style="font-size:7.5pt; margin-bottom:4px; display:flex; justify-content:space-between;">
+          <span>Mascota:</span> <strong>Canino (Perro)</strong>
+        </div>
+        <div style="font-size:7.5pt; margin-bottom:4px; display:flex; justify-content:space-between;">
+          <span>Servicio:</span> <strong>Consulta General</strong>
+        </div>
+        <div style="font-size:7.5pt; margin-bottom:6px; display:flex; justify-content:space-between;">
+          <span>Duración:</span> <strong>30 minutos</strong>
+        </div>
+        <div style="border-top:1px dashed #d1d5db; padding-top:6px; margin-top:6px; display:flex; justify-content:space-between; font-size:8.5pt; font-weight:800;">
+          <span>Total a pagar en clínica:</span> <span>$18.000</span>
+        </div>
+        <div style="font-size:6.8pt; color:#6b7280; margin:6px 0 10px 0;">* Sin cobros ocultos ni anticipos obligatorios.</div>
+        <div class="btn-primary-wf" style="width:100%; text-align:center; font-size:7.5pt;">Continuar a Fecha y Hora &rarr;</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANTALLA 3: PASO 2 FECHA Y HORA -->
+  <h2>Pantalla 3: Paso 2 de Agendamiento — Fecha, Hora y Veterinario (`/agendar/paso-2`)</h2>
+
+  <div class="wireframe-frame">
+    <div class="frame-titlebar">
+      <span>CALENDARIO INTERACTIVO Y DISPONIBILIDAD EN TIEMPO REAL</span>
+      <span class="device-tag">STEP 2 OF 3</span>
+    </div>
+
+    <!-- Filtro de Veterinarios (Avatares 1:1 con X) -->
+    <div style="font-size:8pt; font-weight:700; margin-bottom:6px;">1. Elige profesional (o 'Cualquier disponible' para mayor rapidez):</div>
+    <div style="display:flex; gap:10px; margin-bottom:12px;">
+      <div class="card-wf selected" style="display:flex; align-items:center; gap:8px; padding:6px 10px;">
+        <div style="width:28px; height:28px; border-radius:50%; background:#111827; color:#fff; display:flex; align-items:center; justify-content:center; font-size:7pt; font-weight:700;">★</div>
+        <div>
+          <div style="font-size:7.5pt; font-weight:700;">Cualquier Doctor</div>
+          <div style="font-size:6.8pt; color:#6b7280;">Más turnos libres hoy</div>
+        </div>
+      </div>
+      <div class="card-wf" style="display:flex; align-items:center; gap:8px; padding:6px 10px;">
+        <div class="img-placeholder" style="width:28px; height:28px; border-radius:50%;">
+          <svg viewBox="0 0 100 100"><line x1="0" y1="0" x2="100" y2="100" stroke="#d1d5db"></line><line x1="100" y1="0" x2="0" y2="100" stroke="#d1d5db"></line></svg>
+        </div>
+        <div>
+          <div style="font-size:7.5pt; font-weight:700;">Dra. Emilú Soto</div>
+          <div style="font-size:6.8pt; color:#6b7280;">Especialista Felina</div>
+        </div>
+      </div>
+      <div class="card-wf" style="display:flex; align-items:center; gap:8px; padding:6px 10px;">
+        <div class="img-placeholder" style="width:28px; height:28px; border-radius:50%;">
+          <svg viewBox="0 0 100 100"><line x1="0" y1="0" x2="100" y2="100" stroke="#d1d5db"></line><line x1="100" y1="0" x2="0" y2="100" stroke="#d1d5db"></line></svg>
+        </div>
+        <div>
+          <div style="font-size:7.5pt; font-weight:700;">Dr. Carlos Pérez</div>
+          <div style="font-size:6.8pt; color:#6b7280;">Cirugía y Traumatología</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Calendario y Franjas Horarias -->
+    <div style="display:flex; gap:16px;">
+      <!-- Calendario -->
+      <div style="flex:1; border:1px solid #d1d5db; border-radius:6px; padding:8px;">
+        <div style="display:flex; justify-content:space-between; font-size:8pt; font-weight:700; margin-bottom:6px;">
+          <span>&larr; Octubre 2026 &rarr;</span>
+          <span>Sede Montecristo</span>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(7, 1fr); gap:3px; text-align:center; font-size:7pt;">
+          <span style="font-weight:700;">L</span><span style="font-weight:700;">M</span><span style="font-weight:700;">M</span><span style="font-weight:700;">J</span><span style="font-weight:700;">V</span><span style="font-weight:700;">S</span><span style="font-weight:700;">D</span>
+          <span style="color:#d1d5db;">26</span><span style="color:#d1d5db;">27</span>
+          <span style="background:#f4f4f6; border-radius:3px; padding:3px;">28</span>
+          <span style="background:#111827; color:#fff; border-radius:3px; padding:3px; font-weight:700;">29</span>
+          <span style="background:#f4f4f6; border-radius:3px; padding:3px;">30</span>
+          <span style="background:#f4f4f6; border-radius:3px; padding:3px;">31</span>
+          <span style="color:#d1d5db;">1</span>
+        </div>
+      </div>
+
+      <!-- Franjas Horarias (Horarios Libres) -->
+      <div style="flex:1.2;">
+        <div style="font-size:8pt; font-weight:700; margin-bottom:6px;">Turnos Disponibles para Jueves 29 de Octubre:</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px;">
+          <span class="chip-wf" style="justify-content:center; font-size:7.5pt;">09:00 hrs</span>
+          <span class="chip-wf" style="justify-content:center; font-size:7.5pt;">10:30 hrs</span>
+          <span class="chip-wf" style="justify-content:center; font-size:7.5pt; text-decoration:line-through; color:#9ca3af; background:#f4f4f6;">11:15 hrs</span>
+          <span class="chip-wf active" style="justify-content:center; font-size:7.5pt; font-weight:700;">16:00 hrs ✓</span>
+          <span class="chip-wf" style="justify-content:center; font-size:7.5pt;">17:30 hrs</span>
+          <span class="chip-wf" style="justify-content:center; font-size:7.5pt;">18:15 hrs</span>
+        </div>
+        <div style="margin-top:10px; display:flex; justify-content:space-between; align-items:center;">
+          <span style="font-size:7.5pt; color:#4b5563;">Hora seleccionada: <strong>16:00 hrs</strong></span>
+          <span class="btn-primary-wf" style="font-size:7.5pt; padding:6px 12px;">Continuar a Datos &rarr;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- PANTALLA 4: PASO 3 DATOS DEL TUTOR -->
+  <h2>Pantalla 4: Paso 3 de Agendamiento — Datos del Tutor y Resumen (`/agendar/paso-3`)</h2>
+
+  <div class="wireframe-frame">
+    <div class="frame-titlebar">
+      <span>FORMULARIO DE CONTACTO SIMPLIFICADO — CERO REGISTRO OBLIGATORIO</span>
+      <span class="device-tag">STEP 3 OF 3</span>
+    </div>
+
+    <div style="display:flex; gap:16px;">
+      <!-- Formulario -->
+      <div style="flex:1.3;">
+        <div style="font-size:8.5pt; font-weight:700; margin-bottom:8px;">Datos de contacto para la cita:</div>
+        
+        <!-- Campo 1: Nombre -->
+        <div style="margin-bottom:8px;">
+          <label style="font-size:7.5pt; font-weight:700; display:block; margin-bottom:2px;">Nombre completo del tutor *</label>
+          <div style="border:1.5px solid #111827; border-radius:4px; padding:6px 8px; font-size:8pt; background:#fff;">
+            Carlos Mendoza (Don Carlos)
+          </div>
+        </div>
+
+        <!-- Campo 2: Teléfono WhatsApp -->
+        <div style="margin-bottom:8px;">
+          <label style="font-size:7.5pt; font-weight:700; display:block; margin-bottom:2px;">Teléfono móvil (WhatsApp para confirmación) *</label>
+          <div style="display:flex; border:1.5px solid #111827; border-radius:4px; overflow:hidden;">
+            <span style="background:#f4f4f6; padding:6px 8px; font-size:8pt; border-right:1px solid #d1d5db; font-weight:600;">+56 9</span>
+            <input type="text" value="9876 5432" style="border:none; padding:6px 8px; font-size:8pt; width:100%; outline:none;" readonly>
+            <span style="padding:6px 8px; color:#111827; font-weight:700;">✓</span>
+          </div>
+          <div style="font-size:6.8pt; color:#6b7280; margin-top:2px;">Te enviaremos el comprobante y el recordatorio por WhatsApp.</div>
+        </div>
+
+        <!-- Campo 3: Nombre de Mascota y Motivo -->
+        <div style="display:flex; gap:8px; margin-bottom:8px;">
+          <div style="flex:1;">
+            <label style="font-size:7.5pt; font-weight:700; display:block; margin-bottom:2px;">Nombre de la mascota</label>
+            <div style="border:1.5px solid #d1d5db; border-radius:4px; padding:6px 8px; font-size:8pt; background:#fff;">Rocky</div>
+          </div>
+          <div style="flex:1;">
+            <label style="font-size:7.5pt; font-weight:700; display:block; margin-bottom:2px;">Edad aproximada</label>
+            <div style="border:1.5px solid #d1d5db; border-radius:4px; padding:6px 8px; font-size:8pt; background:#fff;">11 años (Sénior)</div>
+          </div>
+        </div>
+
+        <div style="margin-bottom:10px;">
+          <label style="font-size:7.5pt; font-weight:700; display:block; margin-bottom:2px;">¿Cuál es el motivo principal de la consulta?</label>
+          <div style="border:1.5px solid #d1d5db; border-radius:4px; padding:6px 8px; font-size:7.8pt; color:#4b5563; height:40px;">
+            Chequeo de rutina y control de cadera. Ha estado caminando más lento de lo normal.
+          </div>
+        </div>
+      </div>
+
+      <!-- Desglose de Cita y Confirmación Final -->
+      <div style="flex:0.9; background:#f4f4f6; border:1.5px solid #111827; border-radius:6px; padding:10px;">
+        <div style="font-size:8pt; font-weight:800; border-bottom:1.5px solid #111827; padding-bottom:4px; margin-bottom:8px;">
+          DESGLOSE DEFINITIVO
+        </div>
+        <div style="font-size:7.5pt; line-height:1.6;">
+          <div>📅 <strong>Jueves 29 de Octubre — 16:00 hrs</strong></div>
+          <div>👨‍⚕️ <strong>Dra. Emilú Soto</strong> (Especialista)</div>
+          <div>📍 <strong>Sede Montecristo</strong> (Av. Principal #45)</div>
+          <div>🐕 <strong>Paciente: Rocky</strong> (Perro, 11 años)</div>
+          <div>🩺 <strong>Servicio: Consulta General Preventiva</strong></div>
+        </div>
+
+        <div style="border-top:1.5px dashed #111827; margin:8px 0; padding-top:6px; display:flex; justify-content:space-between; font-size:9pt; font-weight:800;">
+          <span>Total a pagar en recepción:</span>
+          <span>$18.000</span>
+        </div>
+
+        <div class="btn-primary-wf" style="width:100%; text-align:center; padding:9px 10px; font-size:8.5pt; margin-top:6px;">
+          CONFIRMAR MI CITA AHORA ✓
+        </div>
+        <div style="text-align:center; font-size:6.8pt; color:#6b7280; margin-top:4px;">
+          🔒 Al confirmar, no se te cobrará nada online. Pagas al finalizar la consulta.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANTALLA 5: ÉXITO Y CONFIRMACIÓN -->
+  <h2>Pantalla 5: Pantalla de Éxito y Respaldo Multicanal (`/agendar/exito`)</h2>
+
+  <div class="wireframe-frame">
+    <div class="frame-titlebar">
+      <span>CITA CONFIRMADA EXITOSAMENTE</span>
+      <span class="device-tag">STATUS: CONFIRMED — TICKET DIGITAL GENERADO</span>
+    </div>
+
+    <div style="text-align:center; max-width:480px; margin:0 auto 12px auto;">
+      <div style="width:36px; height:36px; border-radius:50%; background:#111827; color:#fff; display:flex; align-items:center; justify-content:center; font-size:16pt; margin:0 auto 6px auto;">
+        ✓
+      </div>
+      <h3 style="font-size:11pt; margin:0 0 2px 0;">¡Tu cita ha sido confirmada con éxito!</h3>
+      <p style="font-size:7.5pt; color:#4b5563; margin:0;">
+        Hemos reservado el turno de Rocky. Te enviamos los detalles a tu WhatsApp <strong>+56 9 9876 5432</strong>.
+      </p>
+    </div>
+
+    <!-- Ticket con QR Placeholder -->
+    <div style="border:2px dashed #111827; border-radius:8px; padding:12px; display:flex; gap:16px; align-items:center; background:#fafafa; margin-bottom:12px;">
+      <!-- QR Placeholder -->
+      <div style="width:80px; height:80px; border:2px solid #111827; background:#fff; display:flex; flex-direction:column; align-items:center; justify-content:center; font-family:'JetBrains Mono', monospace; font-size:6.5pt; padding:4px; text-align:center;">
+        <div style="font-weight:700;">[ QR CODE ]</div>
+        <div style="font-size:5.5pt; color:#6b7280; margin-top:4px;">Pase Rápido de Recepción</div>
+      </div>
+
+      <!-- Datos del Ticket -->
+      <div style="flex:1; font-size:7.8pt; line-height:1.5;">
+        <div style="display:flex; justify-content:space-between; border-bottom:1px solid #d1d5db; padding-bottom:3px; margin-bottom:4px;">
+          <span>Código de Cita: <strong>#PF-8921</strong></span>
+          <span>Estado: <strong>Confirmado</strong></span>
+        </div>
+        <div>Paciente: <strong>Rocky</strong> (Perro Sénior) &bull; Tutor: <strong>Carlos Mendoza</strong></div>
+        <div>Fecha: <strong>Jueves 29 de Octubre a las 16:00 hrs</strong> (Llegar 10 min antes)</div>
+        <div>Veterinario: <strong>Dra. Emilú Soto</strong> &bull; Total: <strong>$18.000</strong></div>
+      </div>
+    </div>
+
+    <!-- Botones de Acción Multicanal -->
+    <div style="display:flex; justify-content:center; gap:8px;">
+      <span class="btn-primary-wf" style="font-size:7.5pt; padding:6px 12px;">📱 Enviar Respaldo a mi WhatsApp</span>
+      <span class="btn-secondary-wf" style="font-size:7.5pt; padding:6px 12px;">📅 Añadir a Google / Apple Calendar</span>
+      <span class="btn-secondary-wf" style="font-size:7.5pt; padding:6px 12px;">📄 Descargar Ticket PDF</span>
+    </div>
+  </div>
+
+  <div class="page-break"></div>
+
+  <!-- PANTALLA 6: MODAL DE PRE-TRIAJE DE EMERGENCIAS -->
+  <h2>Pantalla 6: Módulo y Modal de Pre-Triaje de Urgencias 24/7 (`/urgencias`)</h2>
+
+  <div class="wireframe-frame">
+    <div class="frame-titlebar">
+      <span>MODAL DE ALTA PRIORIDAD — PRE-TRIAJE DE 5 SEGUNDOS</span>
+      <span class="device-tag">EMERGENCY PROTOCOL</span>
+    </div>
+
+    <div style="border:2px solid #111827; border-radius:6px; padding:12px; background:#fff;">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+        <span style="background:#111827; color:#fff; font-weight:800; font-size:10pt; padding:2px 8px; border-radius:4px;">🚨 URGENCIA 24/7</span>
+        <strong style="font-size:9.5pt;">¿Tu mascota corre peligro inminente?</strong>
+      </div>
+      <p style="font-size:8pt; color:#4b5563; margin-bottom:10px;">
+        Selecciona si tu mascota presenta alguno de estos signos de riesgo vital para conectar de inmediato con el médico de guardia:
+      </p>
+
+      <!-- Casillas de Triaje -->
+      <div style="display:flex; flex-direction:column; gap:6px; margin-bottom:12px;">
+        <div style="border:1.5px solid #111827; padding:8px 10px; border-radius:4px; display:flex; align-items:center; gap:8px; background:#f4f4f6;">
+          <input type="checkbox" checked style="width:14px; height:14px;">
+          <span style="font-size:8pt; font-weight:700;">1. Pérdida de conciencia, convulsión activa o desmayo</span>
+        </div>
+        <div style="border:1.5px solid #d1d5db; padding:8px 10px; border-radius:4px; display:flex; align-items:center; gap:8px;">
+          <input type="checkbox" style="width:14px; height:14px;">
+          <span style="font-size:8pt;">2. Dificultad severa para respirar, encías moradas o atragantamiento</span>
+        </div>
+        <div style="border:1.5px solid #d1d5db; padding:8px 10px; border-radius:4px; display:flex; align-items:center; gap:8px;">
+          <input type="checkbox" style="width:14px; height:14px;">
+          <span style="font-size:8pt;">3. Sangrado profuso, herida abierta o atropello</span>
+        </div>
+      </div>
+
+      <!-- Disparo de Emergencia -->
+      <div style="background:#111827; color:#fff; padding:10px; border-radius:6px; text-align:center;">
+        <div style="font-size:10pt; font-weight:800; margin-bottom:2px;">DISPARAR LLAMADA DIRECTA A GUARDIA MÉDICA</div>
+        <div style="font-size:7.5pt; color:#d1d5db; margin-bottom:6px;">La guardia te esperará con la sala de urgencias preparada y despejada.</div>
+        <div class="btn-secondary-wf" style="background:#fff; color:#111827; border-color:#fff; font-size:8pt; padding:6px 16px;">
+          📞 LLAMAR AL +56 9 1234 5678 (1 TOQUE)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="annotation-box">
+    <strong>Resumen de Objetos y Cuadros:</strong> Se diseñaron 6 pantallas maestras con cajas contenedor, avatares 1:1, placeholders de imágenes con aspas cruzadas ("X"), badges, botones redondeados (*pills*), formularios con validación inline, tarjetas de precios, calendario interactivo de selección de turnos y códigos QR.
+  </div>
+
+  <div class="footer-text">
+    Proyecto Patitas Felices &bull; Documento de Wireframes UI en Escala de Grises &bull; Entrega Académica UI/UX &bull; Octubre 2026
+  </div>
+
+</body>
+</html>
